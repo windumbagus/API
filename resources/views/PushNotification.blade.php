@@ -1,8 +1,6 @@
 @extends('admin.admin')
 
 @section('content')
-<!-- DataTables -->
-<link rel="stylesheet" href="assets/adminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
 <h3 class="box-title">Content Management Push Notification </h3>
 
@@ -51,76 +49,63 @@
         </table>
     </div>
    
-@endsection
+<!-- page script -->
+<script>
+        $(function () {
+          // $('#example1').DataTable()
+          $('#push-notif').DataTable({
+            'paging'      : true,
+            'lengthChange': false,
+            'searching'   : false,
+            'ordering'    : true,
+            'info'        : true,
+            'autoWidth'   : false
+          })  
+          
+          //EDIT
+          $('.update-push-notif').on('click',function(){
+                  var id = $(this).attr('data-id');
+                  console.log(id);
+                  $.ajax({
+                      url:"{{asset('/PushNotification/get')}}/"+id,
+                      success: function (data){
+                          console.log(data);
+                          $('[name="push_notif_id_update"]').val(data.id);
+                          $('[name="push_notif_Message_update"]').val(data.Message);
+                          $('[name="push_notif_CodeNotif_update"]').val(data.CodeNotif);
+                          // $('[name="push_notif_CratedDate_update"]').val(data.CreatedDate);
+                          // $('[name="push_notif_UpdatedDate_update"]').val(data.UpdatedDate);
+                      },
+                      dataType:'JSON'
+                  });
+                  $('#update-push-notification').modal();
+              });
+      
+          //ADD
+          $('.add-push-notif').on('click',function(){
+                  $('#add-push-notification').modal();     
+          });
+
+        }) 
+
+          //DELETE
+          function confirmDelete(id){
+              var conf = confirm ('Are you sure delete this data ?')
+          if(conf==true){
+              // console.log('will delete data !!');
+          window.location="{{asset('PushNotification/delete')}}/"+id;
+          }
+          return false;
+          }
+      </script>
 
 @include('modal.add_push_notification')
 @include('modal.update_push_notification')
 
+@endsection
 
-<!-- jQuery 3 -->
-<script src="assets/adminLTE/bower_components/jquery/dist/jquery.min.js"></script>
 
-<!-- DataTables -->
-<script src="assets/adminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="assets/adminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="assets/adminLTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="assets/adminLTE/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="assets/adminLTE/dist/js/demo.js"></script>
 
-<!-- page script -->
-<script>
-  $(function () {
-    // $('#example1').DataTable()
-    $('#push-notif').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
 
-    //ADD
-    $('.add-push-notif').on('click',function(){
-			$('#add-push-notification').modal();
 
-    });
 
-    //EDIT
-	$(function(){
-		// $('#table-product').DataTable();
-		$('.update-push-notif').on('click',function(){
-			var id = $(this).attr('data-id');
-			console.log(id);
-			$.ajax({
-				url:"{{asset('/PushNotification/get')}}/"+id,
-				success: function (data){
-					console.log(data);
-					$('[name="push_notif_id_update"]').val(data.id);
-					$('[name="push_notif_Message_update"]').val(data.Message);
-					$('[name="push_notif_CodeNotif_update"]').val(data.CodeNotif);
-					$('[name="push_notif_CratedDate_update"]').val(data.CreatedDate);
-					$('[name="push_notif_UpdatedDate_update"]').val(data.UpdatedDate);
-
-				},
-				dataType:'JSON'
-			});
-			$('#update-push-notification').modal();
-		});
-	});
-
-    //DELETE
-    function confirmDelete(id){
-        var conf = confirm ('Are you sure delete this data ?')
-    if(conf==true){
-        // console.log('will delete data !!');
-    window.location="{{asset('PushNotification/delete')}}/"+id;
-    }
-    return false;
-    }
-
-</script>
