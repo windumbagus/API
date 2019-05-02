@@ -17,8 +17,8 @@ class CreatePushNotifTable extends Migration
             $table->bigIncrements('id');
             $table->string('Message',200);
             $table->string('CodeNotif',50);
-            $table->dateTime('CreatedDate');
-            $table->dateTime('UpdatedDate');
+            $table->date('CreatedDate');
+            $table->date('UpdatedDate');
         });
     }
 

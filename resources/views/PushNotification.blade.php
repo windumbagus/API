@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-sm-9"></div>
     <div class="col-sm-3">
-        <a href="#" class="add-push-notif btn btn-block btn-primary"data-toggle="modal" data-target="#add-push-notification">Create Push Notification</a><br>    
+        <a href="#" class="add-push-notif btn btn-block btn-primary">Create Push Notification</a><br>    
     </div>
 </div>
 
@@ -38,7 +38,7 @@
                 <td><span>{{$PushNotification->UpdatedDate}}</span></td>
                 <td>
                 <span>
-                    <a href="#" data-id="{{ $PushNotification->id}}" class="update-push-notif btn btn-warning btn-sm"data-toggle="modal" data-target="#update-push-notification"><i class="fa fa-edit"></i></a>  
+                    <a href="#" data-id="{{ $PushNotification->id}}" class="update-push-notif btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>  
                     <a href="#" class="btn btn-danger btn-sm" onclick="confirmDelete('{{ $PushNotification->id}}')"><i class="fa fa-trash"></i></a>
                 </span>
                 </td>
@@ -73,8 +73,8 @@
                           $('[name="push_notif_id_update"]').val(data.id);
                           $('[name="push_notif_Message_update"]').val(data.Message);
                           $('[name="push_notif_CodeNotif_update"]').val(data.CodeNotif);
-                          // $('[name="push_notif_CratedDate_update"]').val(data.CreatedDate);
-                          // $('[name="push_notif_UpdatedDate_update"]').val(data.UpdatedDate);
+                          $('[name="push_notif_CratedDate_update"]').val(data.CreatedDate);
+                          $('[name="push_notif_UpdatedDate_update"]').val(data.UpdatedDate);
                       },
                       dataType:'JSON'
                   });
