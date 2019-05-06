@@ -21,18 +21,22 @@
                                     <input type="hidden" name="push_notif_id_update"/>
                                 </div>
                                 <div class="form-group">
+                                    <label>Message :</label>
                                     <input type="text" class="form-control" name="push_notif_Message_update"
                                     placeholder="Message">
                                 </div>
                                 <div class="form-group">
+                                    <label>Code Notification :</label>
                                     <input type="text" class="form-control" name="push_notif_CodeNotif_update"
-                                    placeholder="Notivication Code">
+                                    placeholder="Notification Code">
                                 </div>
                                 <div class="form-group">
+                                    <label>Created Date :</label>                                    
                                     <input type="date" class="form-control" name="push_notif_CratedDate_update"
                                     placeholder="Created Date">
                                 </div>
                                 <div class="form-group">
+                                    <label>Updated Date :</label>                                    
                                     <input type="date" class="form-control" name="push_notif_UpdatedDate_update"
                                     placeholder="Updated Date">
                                 </div>

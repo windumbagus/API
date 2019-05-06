@@ -26,3 +26,14 @@ Route::get('/PushNotification/get/{id}','PushNotificationController@getById');
 Route::post('/PushNotification/save','PushNotificationController@save');
 Route::get('/PushNotification/delete/{id}','PushNotificationController@delete');
 Route::post('/PushNotification/update','PushNotificationController@update');
+
+
+// //Criticism & Suggestion
+// Route::get('/CriticismSuggestion','CriticismSuggestionController@index');
+
+//Master GCM
+Route::get('/master_gcm','MasterGcmController@index');
+
+//GCM Access
+Route::get('/MasterGcmAccess','MasterGcmAccessController@index');
+

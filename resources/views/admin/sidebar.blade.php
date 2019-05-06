@@ -41,7 +41,7 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#">Master GCM</a></li>
+              <li><a href="{{ asset('master_gcm') }}">Master GCM</a></li>
               <li><a href="#">Master Kota Tempat Tinggal</a></li>
             </ul>
         </li>
@@ -81,7 +81,7 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#">Criticism and suggestions</a></li>
+              <li><a href="#">Criticism and Suggestion</a></li>
             </ul>
           </li>
 

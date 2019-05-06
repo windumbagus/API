@@ -51,19 +51,6 @@
 
 @endsection 
 
-<!-- jQuery 3 -->
-<script src="assets/adminLTE/bower_components/jquery/dist/jquery.min.js"></script>
-
-<!-- DataTables -->
-<script src="assets/adminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="assets/adminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="assets/adminLTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="assets/adminLTE/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="assets/adminLTE/dist/js/demo.js"></script>
-
 <!-- page script -->
 <script>
   $(function () {
