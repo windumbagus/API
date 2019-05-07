@@ -1,5 +1,10 @@
 @extends('admin.admin') 
 
+
+@section('master-management', 'active')
+@section('master-gcm', 'active')
+{{-- @section('title', 'User Mobile') --}}
+
 @section('content')
 
 <!-- DataTables -->
@@ -100,7 +105,7 @@
     </div>
 
 <!-- page script -->
-<script>
+    <script>
         $(function () {
           $('#example1').DataTable()
 
@@ -109,7 +114,7 @@
                   $('#add-master-gcm').modal();     
           });
         })
-      </script>
+    </script>
 
 @include('modal.add_master_gcm')
 @endsection 

@@ -1,5 +1,9 @@
 @extends('admin.admin')
 
+@section('content-management', 'active')
+@section('push-notif', 'active')
+{{-- @section('title', 'User Mobile') --}}
+
 @section('content')
 
 <h3 class="box-title">Content Management Push Notification </h3>
@@ -48,7 +52,7 @@
         </tbody>
         </table>
     </div>
-   
+ </div>
 <!-- page script -->
 <script>
         $(function () {

@@ -37,3 +37,19 @@ Route::get('/master_gcm','MasterGcmController@index');
 //GCM Access
 Route::get('/MasterGcmAccess','MasterGcmAccessController@index');
 
+//Active Leads
+Route::get('/active_leads','ActiveLeadsController@index');
+
+//Archive
+Route::get('/archive','archiveController@index');
+
+//Debug Role Management
+Route::get('/debug_role_management','DebugRoleManagementController@index');
+Route::post('/debug_role_management/save','DebugRoleManagementController@save');
+Route::get('/debug_role_management/get/{id}','DebugRoleManagementController@getById');
+Route::post('/debug_role_management/update','DebugRoleManagementController@update');
+Route::get('/debug_role_management/delete/{id}','DebugRoleManagementController@delete');
+
+
+
+

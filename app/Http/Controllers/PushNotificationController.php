@@ -47,10 +47,10 @@ class PushNotificationController extends Controller
         'CodeNotif'=>$request->post('push_notif_CodeNotif_update'),
         'CreatedDate'=>$request->post('push_notif_CratedDate_update'),
         'UpdatedDate'=>$request->post('push_notif_UpdatedDate_update')
-);
+        );
     DB::table('push_notif')->where('id',$request->post('push_notif_id_update'))->update($data);
     return redirect ('PushNotification');
-}
+    }
 
 
 

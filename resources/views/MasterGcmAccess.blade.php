@@ -1,5 +1,9 @@
 @extends('admin.admin') 
 
+@section('master-management', 'active')
+@section('master-gcm', 'active')
+{{-- @section('title', 'User Mobile') --}}
+
 @section('content')
 
 <!-- DataTables -->

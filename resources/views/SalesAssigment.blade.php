@@ -1,7 +1,7 @@
 @extends('admin.admin') 
-{{-- 
-@section('masteractive', 'active')
-@section('user-mobile-active', 'active')
+
+@section('sales-assigment', 'active')
+{{-- @section('user-mobile-active', 'active')
 @section('title', 'User Mobile') --}}
 
 @section('content')
